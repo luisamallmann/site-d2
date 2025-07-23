@@ -1,65 +1,206 @@
 <!DOCTYPE html>
 <html lang="pt">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Distrito LEO LD-2</title>
-    <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
-        rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
-</head>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
 
-<body>
+  <body>
     <header class="header">
-        <div class="container">
-            <img class="logo" src="img/LOGO GABI OFICIAL - BRANCO.png" alt="logo Al 25/26" />
-            <nav class="menu">
-                <a>Distrito LEO LD-2</a>
-                <a>Clubes</a>
-                <a>Agenda D2</a>
-                <a>Loja</a>
-                <a>Eventos</a>
-            </nav>
+      <div class="container">
+        <img
+          class="logo"
+          src="img/LOGO GABI OFICIAL - BRANCO.png"
+          alt="logo Al 25/26"
+        />
+        <nav class="menu">
+          <a>Distrito LEO LD-2</a>
+          <a>Clubes</a>
+          <a>Agenda D2</a>
+          <a>Loja</a>
+          <a>Eventos</a>
+        </nav>
 
-            <a class="botao-header">Seja LEO!</a>
-        </div>
+        <a class="botao-header">Seja LEO!</a>
+      </div>
     </header>
     <section class="chamada-leo">
-        <div class="imagem-fundo"></div>
+      <div class="imagem-fundo"></div>
 
-        <div class="saiba-mais">
-            <a class="botao-LEO">O que é LEO?</a>
-        </div>
+      <div class="saiba-mais">
+        <a class="botao-LEO">O que é LEO?</a>
+      </div>
     </section>
     <section class="contadores">
-        <div class="blocos">
-            <div class="bloco">
-                <span id="clubes" class="d2-numero">0</span>
-                <p>Clubes</p>
-            </div>
-            <div class="bloco">
-                <div id="associados" class="d2-numero">0</div>
-                <p>Associados</p>
-            </div>
-            <div class="bloco">
-                <div id="anos" class="d2-numero">0</div>
-                <p>Anos de história</p>
-            </div>
+      <div class="blocos">
+        <div class="bloco">
+          <span id="clubes" class="d2-numero">0</span>
+          <p>Clubes</p>
         </div>
+        <div class="bloco">
+          <div id="associados" class="d2-numero">0</div>
+          <p>Associados</p>
+        </div>
+        <div class="bloco">
+          <div id="anos" class="d2-numero">0</div>
+          <p>Anos de história</p>
+        </div>
+      </div>
     </section>
     <section class="texto-d2">
-        <div class="bloco-texto">
-            <h2>Título</h2>
-            <h3>Suntítulo</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec elementum dapibus tincidunt. Etiam nisl
-                magna, commodo eget enim ut, dictum finibus nisi. Duis est elit, sagittis at aliquet porta, euismod nec
-                magna. Donec posuere id eros sit amet pellentesque. Aenean.</p>
-        </div>
+      <div class="bloco-texto">
+        <h1>Título</h1>
+        <h3>Subtítulo</h3>
+        <p>
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+          elementum dapibus tincidunt. Etiam nisl magna, commodo eget enim ut,
+          dictum finibus nisi. Duis est elit, sagittis at aliquet porta, euismod
+          nec magna. Donec posuere id eros sit amet pellentesque. Aenean.
+        </p>
+      </div>
     </section>
-</body>
+    <section class="chama-gabinete">
+      <h1>Conheça nossa equipe</h1>
+      <br />
+      <br />
+      <div class="swiper mySwiper">
+        <div class="swiper-wrapper">
+          <!-- Cada membro é um slide -->
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Presidente</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Vice-presidente</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Secretária</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">I Tesoureiro</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">II Tesoureiro</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Assessora</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Presidente</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Vice-presidente</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Secretária</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">I Tesoureiro</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">II Tesoureiro</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Campanhas</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Presidente</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Vice-presidente</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Secretária</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">I Tesoureiro</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">II Tesoureiro</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Campanhas</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Presidente</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Vice-presidente</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Secretária</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">I Tesoureiro</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">II Tesoureiro</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="membro">
+              IMAGEM<br /><span class="cargo">Campanhas</span>
+            </div>
+          </div>
+        </div>
 
+        <!-- Botões -->
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </section>
+  </body>
 </html>
