@@ -1,163 +1,223 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  overflow: visible;
 }
 
 .header {
-    border-radius: 0px, 0px, 25px, 25px;
-    background-color: #9c59a2;
-    padding: 16px 32px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 125px;
+  border-radius: 0px, 0px, 25px, 25px;
+  background-color: #9c59a2;
+  padding: 16px 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 125px;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .logo {
-    height: 80px;
+  height: 80px;
 }
 
 .menu {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 24px;
 }
 
 .menu a {
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-    color: white;
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.3s;
+  color: white;
 }
 
 .menu a:hover {
-    background-color: #EFB628;
-    color: #325613;
-    cursor: pointer;
+  background-color: #efb628;
+  color: #325613;
+  cursor: pointer;
 }
 
 .botao-header {
-    border: 2px solid #EFB628;
-    background-color: transparent;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.5s;
+  border: 2px solid #efb628;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.5s;
 }
 
 .botao-header:hover {
-    background-color: #EFB628;
-    color: #750380;
-    cursor: pointer;
+  background-color: #efb628;
+  color: #750380;
+  cursor: pointer;
 }
 
 .chamada-leo {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imagem-fundo {
-    position: absolute;
-    inset: 0;
-    background-image: url('img/leopiadas.jpg');
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.5s ease;
-    z-index: 0;
+  position: absolute;
+  inset: 0;
+  background-image: url("img/leopiadas.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 0;
 }
 
 .imagem-fundo::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .saiba-mais {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .botao-LEO {
-    padding: 16px 32px;
-    font-size: 1.2rem;
-    border: 2px solid #EFB628;
-    background-color: transparent;
-    color: white;
-    border-radius: 100px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.5s ease;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  border: 2px solid #efb628;
+  background-color: transparent;
+  color: white;
+  border-radius: 100px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.5s ease;
 }
 
 .botao-LEO:hover {
-    background-color: #EFB628;
-    color: #750380;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-    cursor: pointer;
+  background-color: #efb628;
+  color: #750380;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  cursor: pointer;
 }
 
 .chamada-leo:hover .imagem-fundo {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .contadores {
-    background-color: #A3B494;
-    text-align: center;
-    padding: 50px 20px;
-    height: 300px;
+  background-color: #a3b494;
+  text-align: center;
+  padding: 50px 20px;
+  height: 300px;
 }
 
 .blocos {
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-bottom: 30px;
 }
 
 .bloco {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #D9D9D9;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    font-size: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  font-size: 30px;
 }
 
 .texto-d2 {
-    background-color: #EFB628;
-    text-align: center;
-    padding: 50px 20px;
-    height: 300px;
+  background-color: #efb628;
+  text-align: center;
+  padding: 50px 20px;
+  height: 300px;
 }
 
 .d2-numero {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
+
+h1 {
+  font-size: 50px;
+  color:#750380;
+}
+
+.chama-gabinete {
+  padding: 2rem;
+  text-align: center;
+  background-color: #F6ECD4;
+  overflow: visible;
+}
+
+.membro {
+  background: #fff;
+  border-radius: 12px;
+  width: 300px;
+  height: 300px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  z-index: 1;
+  position: relative;
+}
+
+.cargo {
+  font-style: italic;
+  color: #b36cb3;
+  margin-top: 8px;
+}
+
+.swiper {
+  overflow: visible;
+  height: 500px;
+  width: 2000px;
+}
+
+.swiper-wrapper {
+  overflow: visible;
+  padding: 10px;
+}
+
+.swiper-slide {
+  overflow: visible;
+}
+
+.swiper-button-next, .swiper-button-prev {
+  color: #b36cb3;
+  opacity: 0.6;
+  transition: 0.3s ease;
+}
+
+.swiper-button-next:hover, .swiper-button-prev:hover {
+  opacity: 1;
+  transform: scale(1.1);
 }
