@@ -31,6 +31,7 @@ html {
 
 .logo {
   height: 80px;
+  cursor: pointer;
 }
 
 .menu {
@@ -165,13 +166,13 @@ html {
 
 h1 {
   font-size: 50px;
-  color:#750380;
+  color: #750380;
 }
 
 .chama-gabinete {
   padding: 2rem;
   text-align: center;
-  background-color: #F6ECD4;
+  background-color: #f6ecd4;
   overflow: visible;
 }
 
@@ -185,21 +186,89 @@ h1 {
   justify-content: center;
   align-items: center;
   font-style: italic;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-  z-index: 1;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
   position: relative;
 }
 
+.membro::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(64, 7, 87, 0.5); /* escurece */
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 12px;
+}
+
+.membro:hover::before {
+  opacity: 0; /* remove o escuro no hover */
+}
+
+.membro span {
+  position: relative;
+  z-index: 2;
+}
+
 .cargo {
-  font-style: italic;
-  color: #b36cb3;
-  margin-top: 8px;
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 100%;
+}
+
+.botao-conheca {
+  position: absolute;
+  bottom: 20px;
+  background-color: #efb628;
+  color: #750380;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+  text-decoration: none;
+}
+
+.botao-conheca:hover {
+  background-color: #be8a05;
+}
+
+.membro:hover .botao-conheca {
+  opacity: 1;
+}
+
+/* Oculta o texto original e mostra o nome no hover */
+.cargo::after {
+  content: attr(nome_membro);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  font-weight: bold;
+}
+
+.membro:hover .cargo::after {
+  opacity: 1;
+}
+
+.membro:hover .cargo {
+  color: transparent; /* esconde o cargo */
 }
 
 .swiper {
+  width: 100%;
+  max-width: 2000px;
+  margin: 0 auto;
   overflow: visible;
-  height: 500px;
-  width: 2000px;
+  height: auto;
 }
 
 .swiper-wrapper {
@@ -209,15 +278,60 @@ h1 {
 
 .swiper-slide {
   overflow: visible;
+  z-index: 1;
 }
 
-.swiper-button-next, .swiper-button-prev {
-  color: #b36cb3;
+.swiper-button-next {
+  color: #ffffff !important;
   opacity: 0.6;
   transition: 0.3s ease;
+  top: 55% !important; /* centraliza verticalmente */
+  transform: translateY(-50%);
+  z-index: 5;
 }
 
-.swiper-button-next:hover, .swiper-button-prev:hover {
+.swiper-button-prev {
+  color: #ffffff !important;
+  opacity: 0.6;
+  transition: 0.3s ease;
+  transform: translateY(-50%);
+  z-index: 5;
+  top: 55% !important;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
   opacity: 1;
-  transform: scale(1.1);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  font-size: 20px; /* padrão é 44px */
+}
+
+.layout-gabinete {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
+}
+
+.img-gabinete {
+  height: 800px;
+  display: block;
+  margin-left: 5%;
+  margin-right: auto;
+}
+
+.texto {
+  flex: 1;
+  font-size: 25px;
+}
+
+.container-footer{
+  background-color: #9c59a2;
+  height: 100%;
 }
