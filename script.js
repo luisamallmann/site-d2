@@ -18,7 +18,7 @@ function animarContador(id, valorFinal, duracao) {
 
 // Dados dos contadores
 const contadores = [
-  { id: "clubes", valor: 27, duracao: 1000 },
+  { id: "clubes", valor: 8, duracao: 1000 },
   { id: "associados", valor: 394, duracao: 1200 },
   { id: "anos", valor: 49, duracao: 1000 },
 ];
@@ -36,20 +36,37 @@ const observer = new IntersectionObserver(
     }
   },
   {
-    threshold: 0.6, // ativa quando 60% da seção estiver visível
+    threshold: 0.4, // ativa quando 60% da seção estiver visível
   }
 );
 
 // Observar a seção dos contadores
-const secao = document.querySelector(".contadores");
-observer.observe(secao);
+const secaoContadores = document.querySelector(".contadores");
+observer.observe(secaoContadores);
 
 const swiper = new Swiper('.swiper', {
-  slidesPerView: 6,
+  slidesPerView: 1, // padrão (mobile)
   spaceBetween: 20,
   loop: false,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
+  },
+  breakpoints: {
+    480: {
+      slidesPerView: 2,
+    },
+    768: {
+      slidesPerView: 3,
+    },
+    1024: {
+      slidesPerView: 4,
+    },
+    1280: {
+      slidesPerView: 5,
+    },
+    1440: {
+      slidesPerView: 6,
+    },
   },
 });
