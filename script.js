@@ -45,28 +45,25 @@ const secaoContadores = document.querySelector(".contadores");
 observer.observe(secaoContadores);
 
 const swiper = new Swiper('.swiper', {
-  slidesPerView: 1, // padrão (mobile)
-  spaceBetween: 20,
   loop: false,
+  spaceBetween: 30,
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
   breakpoints: {
-    480: {
+    320: {       // celulares
+      slidesPerView: 1,
+    },
+    600: {       // tablets ou notebooks menores
       slidesPerView: 2,
     },
-    768: {
+    1024: {      // telas maiores
       slidesPerView: 3,
     },
-    1024: {
+    1400: {      // monitores grandes
       slidesPerView: 4,
-    },
-    1280: {
-      slidesPerView: 5,
-    },
-    1440: {
-      slidesPerView: 6,
     },
   },
 });
+

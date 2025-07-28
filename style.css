@@ -1,352 +1,411 @@
 html {
-  scroll-behavior: smooth;
-}
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Montserrat", sans-serif;
-  overflow: visible;
-}
-.header {
-  border-radius: 0px, 0px, 25px, 25px;
-  background-color: #9c59a2;
-  padding: 16px 32px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  height: 125px;
-}
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-}
-.logo {
-  height: 80px;
-  cursor: pointer;
-}
-.menu {
-  display: flex;
-  gap: 24px;
-}
-.menu a {
-  text-decoration: none;
-  font-weight: 500;
-  transition: color 0.3s;
-  color: white;
-}
-.menu a:hover {
-  background-color: #efb628;
-  color: #325613;
-  cursor: pointer;
-}
-.botao-header {
-  border: 2px solid #efb628;
-  background-color: transparent;
-  color: #fff;
-  padding: 10px 20px;
-  border-radius: 100px;
-  text-decoration: none;
-  font-weight: bold;
-  transition: 0.5s;
-}
-.botao-header:hover {
-  background-color: #efb628;
-  color: #750380;
-  cursor: pointer;
-}
-.chamada-leo {
-  position: relative;
-  height: 100vh;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-.imagem-fundo {
-  position: absolute;
-  inset: 0;
-  background-image: url("img/leopiadas.jpg");
-  background-size: cover;
-  background-position: center;
-  transition: transform 0.5s ease;
-  z-index: 0;
-}
-.imagem-fundo::after {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.4);
-}
-.saiba-mais {
-  position: relative;
-  z-index: 2;
-}
-.botao-LEO {
-  padding: 16px 32px;
-  font-size: 1.2rem;
-  border: 2px solid #efb628;
-  background-color: transparent;
-  color: white;
-  border-radius: 100px;
-  font-weight: bold;
-  text-decoration: none;
-  transition: all 0.5s ease;
-}
-.botao-LEO:hover {
-  background-color: #efb628;
-  color: #750380;
-  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-  cursor: pointer;
-}
-.chamada-leo:hover .imagem-fundo {
-  transform: scale(1.05);
-}
-.contadores {
-  background-color: #a3b494;
-  text-align: center;
-  padding: 50px 20px;
-  height: 300px;
-}
-.d2-numero {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
-}
-.blocos {
-  display: flex;
-  justify-content: center;
-  gap: 200px;
-  margin-bottom: 30px;
-}
-.bloco {
-  text-align: center;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  background-color: #d9d9d9;
-  padding: 20px;
-  border-radius: 10px;
-  width: 200px;
-  height: 200px;
-  font-size: 30px;
-}
-.textos-d2 {
-  display: flex;
-  flex-direction: column;
+    scroll-behavior: smooth;
 }
 
-.texto1, .texto2, .texto3 {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 40px;
-  padding: 60px 20px;
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+    overflow: visible;
+}
+
+.header {
+    border-radius: 0px, 0px, 25px, 25px;
+    background-color: #9c59a2;
+    padding: 16px 32px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    height: 125px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.logo {
+    height: 80px;
+    cursor: pointer;
+}
+
+.menu {
+    display: flex;
+    gap: 24px;
+}
+
+.menu a {
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s;
+    color: white;
+}
+
+.menu a:hover {
+    background-color: #efb628;
+    color: #325613;
+    cursor: pointer;
+}
+
+.botao-header {
+    border: 2px solid #efb628;
+    background-color: transparent;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 100px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.5s;
+}
+
+.botao-header:hover {
+    background-color: #efb628;
+    color: #750380;
+    cursor: pointer;
+}
+
+.chamada-leo {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.imagem-fundo {
+    position: absolute;
+    inset: 0;
+    background-image: url("img/leopiadas.jpg");
+    background-size: cover;
+    background-position: center;
+    transition: transform 0.5s ease;
+    z-index: 0;
+}
+
+.imagem-fundo::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.4);
+}
+
+.saiba-mais {
+    position: relative;
+    z-index: 2;
+}
+
+.botao-LEO {
+    padding: 16px 32px;
+    font-size: 1.2rem;
+    border: 2px solid #efb628;
+    background-color: transparent;
+    color: white;
+    border-radius: 100px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.5s ease;
+}
+
+.botao-LEO:hover {
+    background-color: #efb628;
+    color: #750380;
+    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+    cursor: pointer;
+}
+
+.chamada-leo:hover .imagem-fundo {
+    transform: scale(1.05);
+}
+
+.contadores {
+    background-color: #a3b494;
+    text-align: center;
+    padding: 50px 20px;
+    height: 300px;
+}
+
+.d2-numero {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.blocos {
+    display: flex;
+    justify-content: center;
+    gap: 200px;
+    margin-bottom: 30px;
+}
+
+.bloco {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #d9d9d9;
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    height: 200px;
+    font-size: 30px;
+}
+
+.textos-d2 {
+    display: flex;
+    flex-direction: column;
+}
+
+.texto1,
+.texto2,
+.texto3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 40px;
+    padding: 60px 20px;
 }
 
 .texto1 {
-  background-color: #efb628; 
-  flex-direction: row-reverse;
+    background-color: #efb628;
+    flex-direction: row-reverse;
 }
 
 .texto2 {
-  background-color: #f7bffc; 
-  flex-direction: row; 
+    background-color: #f7bffc;
+    flex-direction: row;
 }
 
 .texto3 {
-  background-color: #d7e7c9; 
-  flex-direction: row-reverse; 
+    background-color: #d7e7c9;
+    flex-direction: row-reverse;
 }
 
 .img-texto {
-  width: 400px;
-  max-width: 100%;
-  border-radius: 50px;
+    width: 400px;
+    max-width: 100%;
+    border-radius: 50px;
 }
 
 .conteudo {
-  max-width: 600px;
+    max-width: 600px;
 }
 
 .conteudo h1 {
-  color: #9c59a2;
-  font-size: 2em;
-  margin-bottom: 10px;
+    color: #9c59a2;
+    font-size: 2em;
+    margin-bottom: 10px;
 }
 
 .conteudo h3 {
-  font-weight: bold;
-  margin-bottom: 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
-  .texto1, .texto2, .texto3 {
-    flex-direction: column !important;
-    text-align: center;
-  }
 
-  .img-texto {
-    width: 100%;
-    max-width: 100%;
-  }
+    .texto1,
+    .texto2,
+    .texto3 {
+        flex-direction: column !important;
+        text-align: center;
+    }
 
-  .conteudo {
-    max-width: 100%;
-  }
+    .img-texto {
+        width: 100%;
+        max-width: 100%;
+    }
+
+    .conteudo {
+        max-width: 100%;
+    }
 }
 
 h1 {
-  font-size: 50px;
-  color: #750380;
+    font-size: 50px;
+    color: #750380;
 }
+
 .chama-gabinete {
-  padding: 2rem;
-  text-align: center;
-  background-color: #f6ecd4;
-  overflow: visible;
+    padding: 2rem;
+    text-align: center;
+    background-color: #f6ecd4;
+    overflow: visible;
 }
+
 .membro {
-  background: #fff;
-  border-radius: 12px;
-  width: 300px;
-  height: 300px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  font-style: italic;
-  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-  position: relative;
+    background: #fff;
+    border-radius: 12px;
+    width: 300px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-style: italic;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    z-index: 2;
+    position: relative;
 }
+
 .membro::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background-color: rgba(64, 7, 87, 0.5); /* escurece */
-  transition: opacity 0.3s ease;
-  z-index: 1;
-  border-radius: 12px;
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: rgba(64, 7, 87, 0.5);
+    /* escurece */
+    transition: opacity 0.3s ease;
+    z-index: 1;
+    border-radius: 12px;
 }
+
 .membro:hover::before {
-  opacity: 0; /* remove o escuro no hover */
+    opacity: 0;
+    /* remove o escuro no hover */
 }
+
 .membro span {
-  position: relative;
-  z-index: 2;
+    position: relative;
+    z-index: 2;
 }
+
 .cargo {
-  position: relative;
-  z-index: 2;
-  color: white;
-  width: 100%;
+    position: relative;
+    z-index: 2;
+    color: white;
+    width: 100%;
 }
+
 .botao-conheca {
-  position: absolute;
-  bottom: 20px;
-  background-color: #efb628;
-  color: #750380;
-  padding: 8px 16px;
-  border: none;
-  border-radius: 30px;
-  font-weight: bold;
-  font-size: 1rem;
-  cursor: pointer;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  z-index: 3;
-  text-decoration: none;
+    position: absolute;
+    bottom: 20px;
+    background-color: #efb628;
+    color: #750380;
+    padding: 8px 16px;
+    border: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 1rem;
+    cursor: pointer;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    z-index: 3;
+    text-decoration: none;
 }
+
 .botao-conheca:hover {
-  background-color: #be8a05;
+    background-color: #be8a05;
 }
+
 .membro:hover .botao-conheca {
-  opacity: 1;
+    opacity: 1;
 }
+
 /* Oculta o texto original e mostra o nome no hover */
 .cargo::after {
-  content: attr(nome_membro);
-  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-  position: absolute;
-  inset: 0;
-  text-align: center;
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  color: white;
-  font-weight: bold;
+    content: attr(nome_membro);
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    color: white;
+    font-weight: bold;
 }
+
 .membro:hover .cargo::after {
-  opacity: 1;
+    opacity: 1;
 }
+
 .membro:hover .cargo {
-  color: transparent; /* esconde o cargo */
+    color: transparent;
+    /* esconde o cargo */
 }
+
 .swiper {
-  width: 100%;
-  max-width: 2000px;
-  margin: 0 auto;
-  overflow: visible;
-  height: auto;
+    width: 100%;
+    max-width: 2000px;
+    margin: 0 auto;
+    overflow: visible;
+    height: auto;
+    position: absolute;
 }
+
 .swiper-wrapper {
-  overflow: visible;
-  padding: 10px;
+    overflow: visible;
+    padding: 10px;
 }
+
 .swiper-slide {
-  overflow: visible;
-  z-index: 1;
+    overflow: visible;
+    z-index: 1;
 }
+
 .swiper-button-next {
-  color: #ffffff !important;
-  opacity: 0.6;
-  transition: 0.3s ease;
-  top: 55% !important; /* centraliza verticalmente */
-  transform: translateY(-50%);
-  z-index: 5;
+    color: #ffffff !important;
+    opacity: 0.6;
+    transition: 0.3s ease;
+    top: 55% !important;
+    /* centraliza verticalmente */
+    transform: translateY(-50%);
+    z-index: 5;
 }
+
 .swiper-button-prev {
-  color: #ffffff !important;
-  opacity: 0.6;
-  transition: 0.3s ease;
-  transform: translateY(-50%);
-  z-index: 5;
-  top: 55% !important;
+    color: #ffffff !important;
+    opacity: 0.6;
+    transition: 0.3s ease;
+    transform: translateY(-50%);
+    z-index: 5;
+    top: 55% !important;
 }
+
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-  opacity: 1;
-  transform: translateY(-50%) scale(1.1);
+    opacity: 1;
+    transform: translateY(-50%) scale(1.1);
 }
+
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 20px; /* padrão é 44px */
+    font-size: 20px;
+    /* padrão é 44px */
 }
+
 .layout-gabinete {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  gap: 2rem;
-  padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
+    padding: 2rem;
 }
+
 .img-gabinete {
-  height: 800px;
-  display: block;
-  margin-left: 5%;
-  margin-right: auto;
+    height: 800px;
+    display: block;
+    margin-left: 5%;
+    margin-right: auto;
 }
+
 .texto-gabinete {
-  flex: 1;
-  font-size: 25px;
+    flex: 1;
+    font-size: 25px;
 }
-.container-footer{
-  background-color: #9c59a2;
-  height: 100%;
+
+.container-footer {
+    background-color: #9c59a2;
+    height: 100%;
+}
+
+.img-clube {
+
 }
