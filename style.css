@@ -1,7 +1,6 @@
 html {
   scroll-behavior: smooth;
 }
-
 * {
   margin: 0;
   padding: 0;
@@ -9,7 +8,6 @@ html {
   font-family: "Montserrat", sans-serif;
   overflow: visible;
 }
-
 .header {
   border-radius: 0px, 0px, 25px, 25px;
   background-color: #9c59a2;
@@ -20,7 +18,6 @@ html {
   z-index: 1000;
   height: 125px;
 }
-
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -28,30 +25,25 @@ html {
   align-items: center;
   justify-content: space-between;
 }
-
 .logo {
   height: 80px;
   cursor: pointer;
 }
-
 .menu {
   display: flex;
   gap: 24px;
 }
-
 .menu a {
   text-decoration: none;
   font-weight: 500;
   transition: color 0.3s;
   color: white;
 }
-
 .menu a:hover {
   background-color: #efb628;
   color: #325613;
   cursor: pointer;
 }
-
 .botao-header {
   border: 2px solid #efb628;
   background-color: transparent;
@@ -62,13 +54,11 @@ html {
   font-weight: bold;
   transition: 0.5s;
 }
-
 .botao-header:hover {
   background-color: #efb628;
   color: #750380;
   cursor: pointer;
 }
-
 .chamada-leo {
   position: relative;
   height: 100vh;
@@ -77,7 +67,6 @@ html {
   align-items: center;
   justify-content: center;
 }
-
 .imagem-fundo {
   position: absolute;
   inset: 0;
@@ -87,19 +76,16 @@ html {
   transition: transform 0.5s ease;
   z-index: 0;
 }
-
 .imagem-fundo::after {
   content: "";
   position: absolute;
   inset: 0;
   background-color: rgba(0, 0, 0, 0.4);
 }
-
 .saiba-mais {
   position: relative;
   z-index: 2;
 }
-
 .botao-LEO {
   padding: 16px 32px;
   font-size: 1.2rem;
@@ -111,32 +97,32 @@ html {
   text-decoration: none;
   transition: all 0.5s ease;
 }
-
 .botao-LEO:hover {
   background-color: #efb628;
   color: #750380;
   box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
   cursor: pointer;
 }
-
 .chamada-leo:hover .imagem-fundo {
   transform: scale(1.05);
 }
-
 .contadores {
   background-color: #a3b494;
   text-align: center;
   padding: 50px 20px;
   height: 300px;
 }
-
+.d2-numero {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
+}
 .blocos {
   display: flex;
   justify-content: center;
   gap: 200px;
   margin-bottom: 30px;
 }
-
 .bloco {
   text-align: center;
   display: flex;
@@ -150,32 +136,82 @@ html {
   height: 200px;
   font-size: 30px;
 }
-
-.texto-d2 {
-  background-color: #efb628;
-  text-align: center;
-  padding: 50px 20px;
-  height: 300px;
+.textos-d2 {
+  display: flex;
+  flex-direction: column;
 }
 
-.d2-numero {
-  font-size: 2.5rem;
+.texto1, .texto2, .texto3 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
+}
+
+.texto1 {
+  background-color: #efb628; 
+  flex-direction: row-reverse;
+}
+
+.texto2 {
+  background-color: #f7bffc; 
+  flex-direction: row; 
+}
+
+.texto3 {
+  background-color: #d7e7c9; 
+  flex-direction: row-reverse; 
+}
+
+.img-texto {
+  width: 400px;
+  max-width: 100%;
+  border-radius: 50px;
+}
+
+.conteudo {
+  max-width: 600px;
+}
+
+.conteudo h1 {
+  color: #9c59a2;
+  font-size: 2em;
+  margin-bottom: 10px;
+}
+
+.conteudo h3 {
   font-weight: bold;
-  color: #333;
+  margin-bottom: 10px;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+  .texto1, .texto2, .texto3 {
+    flex-direction: column !important;
+    text-align: center;
+  }
+
+  .img-texto {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  .conteudo {
+    max-width: 100%;
+  }
 }
 
 h1 {
   font-size: 50px;
   color: #750380;
 }
-
 .chama-gabinete {
   padding: 2rem;
   text-align: center;
   background-color: #f6ecd4;
   overflow: visible;
 }
-
 .membro {
   background: #fff;
   border-radius: 12px;
@@ -190,7 +226,6 @@ h1 {
   z-index: 2;
   position: relative;
 }
-
 .membro::before {
   content: "";
   position: absolute;
@@ -200,23 +235,19 @@ h1 {
   z-index: 1;
   border-radius: 12px;
 }
-
 .membro:hover::before {
   opacity: 0; /* remove o escuro no hover */
 }
-
 .membro span {
   position: relative;
   z-index: 2;
 }
-
 .cargo {
   position: relative;
   z-index: 2;
   color: white;
   width: 100%;
 }
-
 .botao-conheca {
   position: absolute;
   bottom: 20px;
@@ -233,15 +264,12 @@ h1 {
   z-index: 3;
   text-decoration: none;
 }
-
 .botao-conheca:hover {
   background-color: #be8a05;
 }
-
 .membro:hover .botao-conheca {
   opacity: 1;
 }
-
 /* Oculta o texto original e mostra o nome no hover */
 .cargo::after {
   content: attr(nome_membro);
@@ -254,15 +282,12 @@ h1 {
   color: white;
   font-weight: bold;
 }
-
 .membro:hover .cargo::after {
   opacity: 1;
 }
-
 .membro:hover .cargo {
   color: transparent; /* esconde o cargo */
 }
-
 .swiper {
   width: 100%;
   max-width: 2000px;
@@ -270,17 +295,14 @@ h1 {
   overflow: visible;
   height: auto;
 }
-
 .swiper-wrapper {
   overflow: visible;
   padding: 10px;
 }
-
 .swiper-slide {
   overflow: visible;
   z-index: 1;
 }
-
 .swiper-button-next {
   color: #ffffff !important;
   opacity: 0.6;
@@ -289,7 +311,6 @@ h1 {
   transform: translateY(-50%);
   z-index: 5;
 }
-
 .swiper-button-prev {
   color: #ffffff !important;
   opacity: 0.6;
@@ -298,18 +319,15 @@ h1 {
   z-index: 5;
   top: 55% !important;
 }
-
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
   opacity: 1;
   transform: translateY(-50%) scale(1.1);
 }
-
 .swiper-button-next::after,
 .swiper-button-prev::after {
   font-size: 20px; /* padrão é 44px */
 }
-
 .layout-gabinete {
   display: flex;
   flex-wrap: wrap;
@@ -318,19 +336,16 @@ h1 {
   gap: 2rem;
   padding: 2rem;
 }
-
 .img-gabinete {
   height: 800px;
   display: block;
   margin-left: 5%;
   margin-right: auto;
 }
-
-.texto {
+.texto-gabinete {
   flex: 1;
   font-size: 25px;
 }
-
 .container-footer{
   background-color: #9c59a2;
   height: 100%;
