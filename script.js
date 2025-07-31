@@ -59,10 +59,10 @@ const swiper = new Swiper('.swiper', {
       slidesPerView: 2,
     },
     1024: {      // telas maiores
-      slidesPerView: 3,
+      slidesPerView: 4,
     },
     1400: {      // monitores grandes
-      slidesPerView: 4,
+      slidesPerView: 5,
     },
   },
 });
