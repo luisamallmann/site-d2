@@ -7,8 +7,14 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"/>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
@@ -26,9 +32,10 @@
         <nav class="menu">
           <a href="index.html">Distrito LEO LD-2</a>
           <a href="clubes.html">Clubes</a>
-          <a>Agenda D2</a>
-          <a>Loja</a>
-          <a>Eventos</a>
+          <a href="noticias.html">Notícias</a>
+          <a href="agendad2.html">Agenda D2</a>
+          <a href="loja.html">Loja</a>
+          <a href="eventos.html">Eventos</a>
         </nav>
 
         <a class="botao-header">Seja LEO!</a>
@@ -61,31 +68,61 @@
       <div class="texto1">
         <img class="img-texto" src="img/acampa.jpg" alt="Foto1" />
         <div class="conteudo">
-          <h1>Título</h1>
-          <h3>Subtítulo</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          <h1>Notícias</h1>
+          <h3>Fique por dentro de todas as nossas atividades</h3>
+          <p>*colocar aqui as últimas 3 notícias*</p>
+          <br />
+          <br />
+          <a class="botao-ler" href="noticias.html">Veja mais</a>
         </div>
       </div>
 
       <div class="texto2">
-        <img class="img-texto" src="img/acampa.jpg" alt="Foto2" />
+        <img class="img-texto" src="img/LEO_clubs_logo.svg.png" alt="Foto2" />
         <div class="conteudo">
-          <h1>Título</h1>
-          <h3>Subtítulo</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+          <h1>O LEO Clube</h1>
+          <h3>O que é o movimento?</h3>
+          <p>*escrever uma breve história sobre o LEO*</p>
+          <br />
+          <br />
+          <a class="botao-ler">Ler mais</a>
         </div>
       </div>
 
       <div class="texto3">
-        <img class="img-texto" src="img/acampa.jpg" alt="Foto3" />
-        <div class="conteudo">
-          <h1>Título</h1>
-          <h3>Subtítulo</h3>
-          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit...</p>
+        <div class="countdown-container">
+          <h1>Contagem Regressiva para o SEDEL!</h1>
+          <div id="countdown" class="countdown">
+            <div>
+              <span id="dias">00</span>
+              <span>Dias</span>
+            </div>
+            <div>
+              <span id="horas">00</span>
+              <span>Horas</span>
+            </div>
+            <div>
+              <span id="minutos">00</span>
+              <span>Minutos</span>
+            </div>
+            <div>
+              <span id="segundos">00</span>
+              <span>Segundos</span>
+            </div>
+          </div>
+          <p
+            id="countdown-message"
+            class="countdown-finished"
+            style="display: none"
+          >
+            O evento começou! 🎉
+          </p>
+          <br>
+          <br>
+          <a class="botao-ler" href="eventos.html">Ver mais eventos</a>
         </div>
       </div>
     </section>
-
     <section class="chama-gabinete">
       <br />
       <br />
@@ -459,6 +496,7 @@
         </div>
       </div>
     </section>
+    <section class="past-presidentes"></section>
     <footer class="container-footer">
       <p>teste teste</p>
       <p>informações finais</p>
