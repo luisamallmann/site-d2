@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="img/icone2.png" type="image/png" />
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -18,130 +19,40 @@
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="script.js" defer></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-    <!-- Adicionado: Carregamento do Tailwind CSS para a nova seção -->
-    <script src="https://cdn.tailwindcss.com"></script>
   </head>
-
   <body>
     <header class="header">
       <div class="container">
-        <img
-          class="logo"
-          src="img/LOGO GABI OFICIAL - BRANCO.png"
-          alt="logo Al 25/26"
-          href="index.html"
-        />
+        <a href="index.html"><img class="logo" src="img/LOGO GABI OFICIAL - BRANCO.png" alt="Logo AL 25/26"></a>
         <nav class="menu">
-          <a href="index.html">Distrito LEO LD-2</a>
+          <li class="dropdown">
+            <a href="#">Distrito LEO LD-2</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Sobre nós</a></li>
+              <li><a href="sobre_leo.html">O que é o LEO?</a></li>
+              <li><a href="#">Projetos</a></li>
+              <li><a href="https://instrucaoleoistica.blogspot.com/" target="_blank">Instruções Leoísticas</a></li>
+              <li><a href="#">Invocações a Deus</a></li>
+              <li><a href="#">Estatutos e Regulamentos</a></li>
+              <li><a href="#">Outros documentos</a></li>
+            </ul>
+          </li>
           <a href="clubes.html">Clubes</a>
           <a href="noticias.html">Notícias</a>
           <a href="agendad2.html">Agenda D2</a>
           <a href="loja.html">Loja</a>
-          <a href="eventos.html">Eventos</a>
+          <li class="dropdown">
+            <a href="eventos.html">Eventos</a>
+            <ul class="dropdown-content">
+              <li><a href="#">SEDEL</a></li>
+              <li><a href="#">LEOPÍADAS</a></li>
+              <li><a href="#">ACAMPALEO</a></li>
+              <li><a href="#">CONFE</a></li>
+            </ul>
+          </li>
         </nav>
-
         <a class="botao-header">Seja LEO!</a>
       </div>
     </header>
-    <!-- INÍCIO DA NOVA SEÇÃO: ATIVIDADES/POSTS -->
-    <section class="atividades-section">
-      <div class="atividades-container">
-        <h2 class="text-3xl font-bold text-gray-800 text-center">Atividades</h2>
-        <div id="posts-container" class="atividades-grid">
-            <!-- Os cards dos posts serão injetados aqui pelo JavaScript -->
-            <div id="loading-spinner" class="col-span-full flex items-center justify-center py-8">
-                <div class="spinner"></div>
-            </div>
-        </div>
-      </div>
-    </section>
-    <!-- FIM DA NOVA SEÇÃO -->
-    <footer class="container-footer">
-      <p>teste teste</p>
-      <p>informações finais</p>
-      <p>icones</p>
-      <p>lalalal</p>
-    </footer>
-
-    <script>
-        // Função para formatar a data
-        function formatarData(data) {
-            const dataPost = new Date(data);
-            const agora = new Date();
-            const diferencaEmMeses = (agora.getFullYear() - dataPost.getFullYear()) * 12 + (agora.getMonth() - dataPost.getMonth());
-            if (diferencaEmMeses === 0) {
-                return "1 mês atrás";
-            } else if (diferencaEmMeses === 1) {
-                return "1 mês atrás";
-            } else {
-                return `${diferencaEmMeses} meses atrás`;
-            }
-        }
-
-        // Função que cria e retorna o HTML de um post card
-        function criarPostCard(post) {
-            const card = document.createElement('div');
-            card.className = 'post-card';
-            card.innerHTML = `
-                <div class="post-header">
-                    <img class="post-logo" src="https://placehold.co/48x48/9c59a2/ffffff?text=L" alt="Logo LEO">
-                    <div class="post-info">
-                        <h4>Distrito LEO LD-2</h4>
-                        <p>${formatarData(post.created_time)}</p>
-                    </div>
-                </div>
-                <p class="post-text">${post.message || post.story || ''}</p>
-                ${post.full_picture ? `<img class="post-image" src="${post.full_picture}" alt="Imagem do Post">` : ''}
-                <a href="${post.permalink_url}" class="post-link" target="_blank">Ver no Facebook</a>
-            `;
-            return card;
-        }
-
-        // Função principal para buscar e renderizar os posts
-        async function carregarPostsDoFacebook() {
-            const postsContainer = document.getElementById('posts-container');
-            const spinner = document.getElementById('loading-spinner');
-
-            // Simula a resposta da API do Facebook - verificar uma API para a nossa página!!
-            const apiResponse = {
-                data: [
-                    {
-                        id: '1',
-                        created_time: '2025-06-01T10:00:00+0000',
-                        message: 'Mais uma conquista para os nossos associados! O Distrito LEO LD-2 firmou parceria com a UNIP (Universidade Paulista), trazendo benefícios exclusivos para quem sonha em construir um futuro por meio da educação!',
-                        permalink_url: 'https://www.facebook.com/leold2/#', // URL de exemplo
-                        full_picture: 'https://placehold.co/400x250/efb628/750380?text=Parceria+UNIP'
-                    },
-                    {
-                        id: '2',
-                        created_time: '2025-06-02T12:00:00+0000',
-                        message: 'Mais oportunidades para quem faz a diferença! O Distrito LEO LD-2 firmou um convênio com a UniCesumar, oferecendo descontos de até 20% nas mensalidades para associados!',
-                        permalink_url: 'https://www.facebook.com/leold2/#', // URL de exemplo
-                        full_picture: 'https://placehold.co/400x250/f7bffc/325613?text=Parceria+UniCesumar'
-                    },
-                    {
-                        id: '3',
-                        created_time: '2025-01-01T08:00:00+0000',
-                        message: 'Neste Natal, espalhamos amor, solidariedade e esperança! Mais do que presentes, entregamos sorrisos e momentos que aquecem o coração.',
-                        permalink_url: 'https://www.facebook.com/leold2/#', // URL de exemplo
-                        full_picture: 'https://placehold.co/400x250/a3b494/750380?text=Natal+LEO'
-                    }
-                ]
-            };
-
-            // Remove o spinner de carregamento
-            spinner.remove();
-
-            // Renderiza os posts
-            apiResponse.data.forEach(post => {
-                const postCard = criarPostCard(post);
-                postsContainer.appendChild(postCard);
-            });
-        }
-
-        // Inicia o carregamento dos posts quando a página é carregada
-        window.addEventListener('load', carregarPostsDoFacebook);
-    </script>
   </body>
 </html>
