@@ -7,6 +7,7 @@
     <link rel="stylesheet" type="text/css" href="style.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="icon" href="img/icone2.png" type="image/png">
     <link
       href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
@@ -23,19 +24,33 @@
   <body>
     <header class="header">
       <div class="container">
-        <img
-          class="logo"
-          src="img/LOGO GABI OFICIAL - BRANCO.png"
-          alt="logo Al 25/26"
-          href="index.html"
-        />
+        <a href="index.html"><img class="logo" src="img/LOGO GABI OFICIAL - BRANCO.png" alt="Logo AL 25/26"></a>
         <nav class="menu">
-          <a href="index.html">Distrito LEO LD-2</a>
+          <li class="dropdown">
+            <a href="#">Distrito LEO LD-2</a>
+            <ul class="dropdown-content">
+              <li><a href="#">Sobre nós</a></li>
+              <li><a href="sobre_leo.html">O que é o LEO?</a></li>
+              <li><a href="#">Projetos</a></li>
+              <li><a href="https://instrucaoleoistica.blogspot.com/" target="_blank">Instruções Leoísticas</a></li>
+              <li><a href="#">Invocações a Deus</a></li>
+              <li><a href="#">Estatutos e Regulamentos</a></li>
+              <li><a href="#">Outros documentos</a></li>
+            </ul>
+          </li>
           <a href="clubes.html">Clubes</a>
           <a href="noticias.html">Notícias</a>
           <a href="agendad2.html">Agenda D2</a>
           <a href="loja.html">Loja</a>
-          <a href="eventos.html">Eventos</a>
+          <li class="dropdown">
+            <a href="eventos.html">Eventos</a>
+            <ul class="dropdown-content">
+              <li><a href="#">SEDEL</a></li>
+              <li><a href="#">LEOPÍADAS</a></li>
+              <li><a href="#">ACAMPALEO</a></li>
+              <li><a href="#">CONFE</a></li>
+            </ul>
+          </li>
         </nav>
 
         <a class="botao-header">Seja LEO!</a>
@@ -45,7 +60,7 @@
       <div class="imagem-fundo"></div>
 
       <div class="saiba-mais">
-        <a class="botao-LEO">O que é LEO?</a>
+        <a class="botao-LEO" href="sobre_leo.html">O que é LEO?</a>
       </div>
     </section>
     <section class="contadores">
@@ -85,7 +100,7 @@
           <p>*escrever uma breve história sobre o LEO*</p>
           <br />
           <br />
-          <a class="botao-ler">Ler mais</a>
+          <a class="botao-ler" href="sobre_leo.html">Ler mais</a>
         </div>
       </div>
 
@@ -117,8 +132,8 @@
           >
             O evento começou! 🎉
           </p>
-          <br>
-          <br>
+          <br />
+          <br />
           <a class="botao-ler" href="eventos.html">Ver mais eventos</a>
         </div>
       </div>
