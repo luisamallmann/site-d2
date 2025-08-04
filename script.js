@@ -44,26 +44,70 @@ const observer = new IntersectionObserver(
 const secaoContadores = document.querySelector(".contadores");
 observer.observe(secaoContadores);
 
-const swiper = new Swiper('.swiper', {
-  loop: false,
-  spaceBetween: 30,
+// Defina a data e hora alvo para a contagem regressiva
+// Formato: Ano, Mês (0=Jan, 1=Fev...), Dia, Hora, Minuto, Segundo
+// Exemplo: 31 de Dezembro de 2025 às 23:59:59
+const targetDate = new Date(2025, 9, 14, 0, 0, 0).getTime();
+
+const countdownElement = document.getElementById("countdown");
+const messageElement = document.getElementById("countdown-message");
+const diasElement = document.getElementById("dias");
+const horasElement = document.getElementById("horas");
+const minutosElement = document.getElementById("minutos");
+const segundosElement = document.getElementById("segundos");
+
+function updateCountdown() {
+  const now = new Date().getTime();
+  const distance = targetDate - now;
+
+  // Se a contagem regressiva terminou
+  if (distance < 0) {
+    clearInterval(countdownInterval);
+    countdownElement.style.display = "none"; // Esconde os números
+    messageElement.style.display = "block"; // Mostra a mensagem de finalizado
+    return;
+  }
+
+  // Cálculos de tempo para dias, horas, minutos e segundos
+  const dias = Math.floor(distance / (1000 * 60 * 60 * 24));
+  const horas = Math.floor(
+    (distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60)
+  );
+  const minutos = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+  const segundos = Math.floor((distance % (1000 * 60)) / 1000);
+
+  // Adiciona um zero à esquerda se o número for menor que 10
+  diasElement.textContent = String(dias).padStart(2, "0");
+  horasElement.textContent = String(horas).padStart(2, "0");
+  minutosElement.textContent = String(minutos).padStart(2, "0");
+  segundosElement.textContent = String(segundos).padStart(2, "0");
+}
+
+// Atualiza a contagem regressiva a cada 1 segundo
+const countdownInterval = setInterval(updateCountdown, 1000);
+
+// Chama a função uma vez imediatamente para evitar delay inicial
+updateCountdown();
+
+const swiper = new Swiper(".swiper", {
+  slidesPerView: "auto",
+  spaceBetween: 20,
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
   breakpoints: {
-    320: {       // celulares
-      slidesPerView: 1,
+    1440: {
+      slidesPerView: 6,
     },
-    600: {       // tablets ou notebooks menores
+    1024: {
+      slidesPerView: 4,
+    },
+    768: {
       slidesPerView: 2,
     },
-    1024: {      // telas maiores
-      slidesPerView: 3,
-    },
-    1400: {      // monitores grandes
-      slidesPerView: 4,
+    480: {
+      slidesPerView: 1,
     },
   },
 });
-

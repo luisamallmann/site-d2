@@ -1,409 +1,539 @@
 html {
-    scroll-behavior: smooth;
+  scroll-behavior: smooth;
+  background-color: #F6ECD4;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Montserrat", sans-serif;
-    overflow: visible;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+  overflow: visible;
 }
 
 .header {
-    border-radius: 0px, 0px, 25px, 25px;
-    background-color: #9c59a2;
-    padding: 16px 32px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    height: 125px;
+  border-radius: 0 0 25px 25px !important;
+  background-color: #9c59a2;
+  padding: 16px 32px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  height: 125px;
+}
+
+/* Dropdown */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #9b4d9b;
+  min-width: 220px;
+  z-index: 1;
+  flex-direction: column;
+}
+
+.dropdown-content li {
+  list-style: none;
+}
+
+.dropdown-content li a {
+  padding: 12px 16px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown-content li a:hover {
+  background-color: #833b83;
+  color: #efb628;
+}
+
+/* Mostra o dropdown ao passar o mouse */
+.dropdown:hover .dropdown-content {
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
 }
 
 .logo {
-    height: 80px;
-    cursor: pointer;
+  height: 80px;
+  cursor: pointer;
+  background-image: url(img/LOGO\ GABI\ OFICIAL\ -\ BRANCO.png);
 }
 
 .menu {
-    display: flex;
-    gap: 24px;
+  display: flex;
+  gap: 15px;
+  padding: 8px 16px;
+  flex-grow: 1;
+  justify-content: center;
+  width: 100%;
 }
 
 .menu a {
-    text-decoration: none;
-    font-weight: 500;
-    transition: color 0.3s;
-    color: white;
+  text-decoration: none;
+  font-weight: 500;
+  color: white;
+  padding: 10px 20px; /* Mantém o padding fixo */
+  background-color: transparent; /* Sem fundo no normal */
+  transition: background-color 0.3s, color 0.3s; /* Transição suave */
+  display: inline-block; /* Para garantir padding funcione bem */
 }
 
 .menu a:hover {
-    background-color: #efb628;
-    color: #325613;
-    cursor: pointer;
+  background-color: #efb628;
+  color: #750380;
+  cursor: pointer;
 }
 
 .botao-header {
-    border: 2px solid #efb628;
-    background-color: transparent;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 100px;
-    text-decoration: none;
-    font-weight: bold;
-    transition: 0.5s;
+  border: 2px solid #efb628;
+  background-color: transparent;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 100px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.5s;
+  width: 13%;
 }
 
 .botao-header:hover {
-    background-color: #efb628;
-    color: #750380;
-    cursor: pointer;
+  background-color: #efb628;
+  color: #750380;
+  box-shadow: 0 0 10px #efb7284b;
+  cursor: pointer;
 }
-
+/*index.html*/
 .chamada-leo {
-    position: relative;
-    height: 100vh;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+  position: relative;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .imagem-fundo {
-    position: absolute;
-    inset: 0;
-    background-image: url("img/leopiadas.jpg");
-    background-size: cover;
-    background-position: center;
-    transition: transform 0.5s ease;
-    z-index: 0;
+  position: absolute;
+  inset: 0;
+  height: 100%;
+  background-image: url("img/leopiadas.jpg");
+  background-size: cover;
+  background-position: center;
+  transition: transform 0.5s ease;
+  z-index: 0;
 }
 
 .imagem-fundo::after {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.4);
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(0, 0, 0, 0.4);
 }
 
 .saiba-mais {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .botao-LEO {
-    padding: 16px 32px;
-    font-size: 1.2rem;
-    border: 2px solid #efb628;
-    background-color: transparent;
-    color: white;
-    border-radius: 100px;
-    font-weight: bold;
-    text-decoration: none;
-    transition: all 0.5s ease;
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  border: 2px solid #efb628;
+  background-color: transparent;
+  color: white;
+  border-radius: 100px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.5s ease;
 }
 
 .botao-LEO:hover {
-    background-color: #efb628;
-    color: #750380;
-    box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
-    cursor: pointer;
+  background-color: #efb628;
+  color: #750380;
+  box-shadow: 0 0 10px rgba(255, 215, 0, 0.4);
+  cursor: pointer;
 }
 
 .chamada-leo:hover .imagem-fundo {
-    transform: scale(1.05);
+  transform: scale(1.05);
 }
 
 .contadores {
-    background-color: #a3b494;
-    text-align: center;
-    padding: 50px 20px;
-    height: 300px;
+  background-color: #a3b494;
+  text-align: center;
+  padding: 50px 20px;
+  height: 300px;
 }
 
 .d2-numero {
-    font-size: 2.5rem;
-    font-weight: bold;
-    color: #333;
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #333;
 }
 
 .blocos {
-    display: flex;
-    justify-content: center;
-    gap: 200px;
-    margin-bottom: 30px;
+  display: flex;
+  justify-content: center;
+  gap: 200px;
+  margin-bottom: 30px;
 }
 
 .bloco {
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: #d9d9d9;
-    padding: 20px;
-    border-radius: 10px;
-    width: 200px;
-    height: 200px;
-    font-size: 30px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #d9d9d9;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  height: 200px;
+  font-size: 30px;
 }
 
 .textos-d2 {
-    display: flex;
-    flex-direction: column;
+  display: flex;
+  flex-direction: column;
 }
 
 .texto1,
 .texto2,
 .texto3 {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 40px;
-    padding: 60px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  padding: 60px 20px;
 }
 
 .texto1 {
-    background-color: #efb628;
-    flex-direction: row-reverse;
+  background-color: #efb628;
+  flex-direction: row-reverse;
 }
 
 .texto2 {
-    background-color: #f7bffc;
-    flex-direction: row;
+  background-color: #f7bffc;
+  flex-direction: row;
+  text-align: right;
 }
 
 .texto3 {
-    background-color: #d7e7c9;
-    flex-direction: row-reverse;
+  background-color: #d7e7c9;
+  flex-direction: row-reverse;
+}
+
+.botao-ler {
+  padding: 16px 32px;
+  font-size: 1.2rem;
+  border: 2px solid #750380;
+  background-color: transparent;
+  color: #750380;
+  border-radius: 100px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.5s ease;
+}
+
+.botao-ler:hover {
+  background-color: #750380;
+  color: white;
+  box-shadow: 0 0 10px #76038048;
+  cursor: pointer;
 }
 
 .img-texto {
-    width: 400px;
-    max-width: 100%;
-    border-radius: 50px;
+  width: 400px;
+  max-width: 100%;
+  border-radius: 50px;
 }
 
 .conteudo {
-    max-width: 600px;
+  max-width: 600px;
 }
 
 .conteudo h1 {
-    color: #9c59a2;
-    font-size: 2em;
-    margin-bottom: 10px;
+  color: #9c59a2;
+  font-size: 2em;
+  margin-bottom: 10px;
 }
 
 .conteudo h3 {
-    font-weight: bold;
-    margin-bottom: 10px;
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
 /* Responsivo */
 @media (max-width: 768px) {
+  .texto1,
+  .texto2,
+  .texto3 {
+    flex-direction: column !important;
+    text-align: center;
+  }
 
-    .texto1,
-    .texto2,
-    .texto3 {
-        flex-direction: column !important;
-        text-align: center;
-    }
+  .img-texto {
+    width: 100%;
+    max-width: 100%;
+  }
 
-    .img-texto {
-        width: 100%;
-        max-width: 100%;
-    }
+  .conteudo {
+    max-width: 100%;
+  }
+}
 
-    .conteudo {
-        max-width: 100%;
-    }
+/*contagem regresiva*/
+.countdown-container {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+.countdown-container h1 {
+  color: #9c59a2;
+  font-size: 2.5em;
+  margin-bottom: 30px;
+}
+.countdown {
+  display: flex;
+  justify-content: center;
+  gap: 25px;
+  flex-wrap: wrap; /* Para responsividade em telas menores */
+}
+.countdown div {
+  background-color: #efb628;
+  color: #750380;
+  padding: 20px 30px;
+  border-radius: 10px;
+  font-size: 2.2em;
+  font-weight: bold;
+  min-width: 120px; /* Garante tamanho mínimo para uniformidade */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+.countdown span {
+  display: block;
+  font-size: 0.5em;
+  font-weight: 500;
+  color: #fff; /* Texto da label em branco para contraste */
+  margin-top: 5px;
+}
+.countdown-finished {
+  color: #750380;
+  font-size: 2em;
+  font-weight: bold;
+  margin-top: 30px;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .countdown-container h1 {
+    font-size: 1.8em;
+  }
+  .countdown div {
+    padding: 15px 20px;
+    font-size: 1.8em;
+    min-width: 90px;
+  }
+  .countdown-finished {
+    font-size: 1.5em;
+  }
 }
 
 h1 {
-    font-size: 50px;
-    color: #750380;
+  font-size: 50px;
+  color: #750380;
 }
 
 .chama-gabinete {
-    padding: 2rem;
-    text-align: center;
-    background-color: #f6ecd4;
-    overflow: visible;
+  padding: 2rem 1rem;
+  text-align: center;
+  background-color: #f6ecd4;
+  overflow: visible;
+  max-width: 100%;
 }
 
 .membro {
-    background: #fff;
-    border-radius: 12px;
-    width: 300px;
-    height: 300px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    font-style: italic;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 2;
-    position: relative;
+  background: #fff;
+  border-radius: 12px;
+  width: 295px;
+  height: 295px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-style: italic;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 2;
+  position: relative;
 }
 
 .membro::before {
-    content: "";
-    position: absolute;
-    inset: 0;
-    background-color: rgba(64, 7, 87, 0.5);
-    /* escurece */
-    transition: opacity 0.3s ease;
-    z-index: 1;
-    border-radius: 12px;
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-color: rgba(64, 7, 87, 0.5);
+  /* escurece */
+  transition: opacity 0.3s ease;
+  z-index: 1;
+  border-radius: 12px;
 }
 
 .membro:hover::before {
-    opacity: 0;
-    /* remove o escuro no hover */
+  opacity: 0;
+  /* remove o escuro no hover */
 }
 
 .membro span {
-    position: relative;
-    z-index: 2;
+  position: relative;
+  z-index: 2;
 }
 
 .cargo {
-    position: relative;
-    z-index: 2;
-    color: white;
-    width: 100%;
+  position: relative;
+  z-index: 2;
+  color: white;
+  width: 100%;
 }
 
 .botao-conheca {
-    position: absolute;
-    bottom: 20px;
-    background-color: #efb628;
-    color: #750380;
-    padding: 8px 16px;
-    border: none;
-    border-radius: 30px;
-    font-weight: bold;
-    font-size: 1rem;
-    cursor: pointer;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    z-index: 3;
-    text-decoration: none;
+  position: absolute;
+  bottom: 20px;
+  background-color: #efb628;
+  color: #750380;
+  padding: 8px 16px;
+  border: none;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  cursor: pointer;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  z-index: 3;
+  text-decoration: none;
 }
 
 .botao-conheca:hover {
-    background-color: #be8a05;
+  background-color: #be8a05;
 }
 
 .membro:hover .botao-conheca {
-    opacity: 1;
+  opacity: 1;
 }
 
 /* Oculta o texto original e mostra o nome no hover */
 .cargo::after {
-    content: attr(nome_membro);
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
-    position: absolute;
-    inset: 0;
-    text-align: center;
-    opacity: 0;
-    transition: opacity 0.3s ease;
-    color: white;
-    font-weight: bold;
+  content: attr(nome_membro);
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.8);
+  position: absolute;
+  inset: 0;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  color: white;
+  font-weight: bold;
 }
 
 .membro:hover .cargo::after {
-    opacity: 1;
+  opacity: 1;
 }
 
 .membro:hover .cargo {
-    color: transparent;
-    /* esconde o cargo */
+  color: transparent;
+  /* esconde o cargo */
 }
 
 .swiper {
-    width: 100%;
-    max-width: 2000px;
-    margin: 0 auto;
-    overflow: visible;
-    height: auto;
-    position: absolute;
+  width: 100%;
+  max-width: 100%;
+  margin: 0 auto;
+  overflow: visible;
+  height: auto;
+  position: absolute;
+  padding-left: 0;
+  padding-right: 0;
 }
 
 .swiper-wrapper {
-    overflow: visible;
-    padding: 10px;
+  overflow: visible;
+  padding: 10px;
+  align-items: center;
 }
 
 .swiper-slide {
-    overflow: visible;
-    z-index: 1;
+  overflow: visible;
+  z-index: 1;
+  width: auto;
+  flex-shrink: 0;
 }
 
 .swiper-button-next {
-    color: #ffffff !important;
-    opacity: 0.6;
-    transition: 0.3s ease;
-    top: 55% !important;
-    /* centraliza verticalmente */
-    transform: translateY(-50%);
-    z-index: 5;
+  color: #ffffff !important;
+  opacity: 0.6;
+  transition: 0.3s ease;
+  top: 55% !important;
+  /* centraliza verticalmente */
+  transform: translateY(-50%);
+  z-index: 5;
 }
 
 .swiper-button-prev {
-    color: #ffffff !important;
-    opacity: 0.6;
-    transition: 0.3s ease;
-    transform: translateY(-50%);
-    z-index: 5;
-    top: 55% !important;
+  color: #ffffff !important;
+  opacity: 0.6;
+  transition: 0.3s ease;
+  transform: translateY(-50%);
+  z-index: 5;
+  top: 55% !important;
 }
 
 .swiper-button-next:hover,
 .swiper-button-prev:hover {
-    opacity: 1;
-    transform: translateY(-50%) scale(1.1);
+  opacity: 1;
+  transform: translateY(-50%) scale(1.1);
 }
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-    font-size: 20px;
-    /* padrão é 44px */
+  font-size: 20px;
+  /* padrão é 44px */
 }
 
 .layout-gabinete {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    gap: 2rem;
-    padding: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+  padding: 2rem;
 }
 
 .img-gabinete {
-    height: 800px;
-    display: block;
-    margin-left: 5%;
-    margin-right: auto;
+  height: 800px;
+  display: block;
+  margin-left: 5%;
+  margin-right: auto;
 }
 
 .texto-gabinete {
-    flex: 1;
-    font-size: 25px;
+  flex: 1;
+  font-size: 25px;
+  text-align: right;
 }
 
 .container-footer {
-    background-color: #9c59a2;
-    height: 100%;
+  background-color: #9c59a2;
+  height: 100%;
 }
 .img-clube{
     width: 200px;
@@ -412,6 +542,7 @@ h1 {
     background-color: #f6ecd4;
 }
 
+<<<<<<< HEAD
 .regiao{
     display: flex;
     justify-content: center;
@@ -433,3 +564,32 @@ h1 {
     height: 300px;
     padding: 10px;
 }
+=======
+.page-title {
+  text-align: center;
+  font-size: 2.5em;
+  color: #9c59a2;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+/*clubes.html*/
+.clube-container{
+  border: 2px solid #750380;
+  width: 300px;
+  height: 400px;
+  padding: 40px;
+  justify-content: center;
+  align-items: center;
+  background-color: white;
+  border-radius: 25px;
+}
+.clube-container h3{
+  color: #750380;
+}
+.img-clube{
+  overflow: hidden;
+  border-radius: 100%;
+  height: 200px;
+}
+>>>>>>> 87d5d095e44aa17299ebed6073c31aac451c71e7
