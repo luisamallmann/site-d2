@@ -54,6 +54,49 @@ html {
   flex-direction: column;
 }
 
+/* Submenu lateral (do item Projetos) */
+.dropdown-submenu {
+  position: relative; /* Essencial para posicionar o submenu corretamente */
+}
+
+.dropdown-submenu > a {
+  display: block; /* Garante que o link de "Projetos" ocupe toda a largura */
+  position: relative;
+  z-index: 3;
+}
+
+.dropdown-submenu:hover .sub-menu {
+  display: flex;
+}
+
+.sub-menu {
+  display: none;
+  position: absolute;
+  top: 0;
+  left: 245px;
+  background-color: #9b4d9b;
+  min-width: 220px;
+  z-index: 5;
+  flex-direction: column;
+  box-shadow: 2px 0 8px rgba(0, 0, 0, 0.527);
+}
+
+.sub-menu li {
+  list-style: none;
+}
+
+.sub-menu li a {
+  padding: 12px 16px;
+  display: block;
+  color: white;
+  text-decoration: none;
+}
+
+.sub-menu li a:hover {
+  background-color: #833b83;
+  color: #efb628;
+}
+
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -205,6 +248,7 @@ html {
 .textos-d2 {
   display: flex;
   flex-direction: column;
+  text-align: left;
 }
 
 .texto1,
@@ -220,11 +264,20 @@ html {
 .texto1 {
   background-color: #efb628;
   flex-direction: row-reverse;
+  text-align: left;
+}
+
+.texto1 h1{
+  text-align: left;
 }
 
 .texto2 {
   background-color: #f7bffc;
   flex-direction: row;
+  text-align: right;
+}
+
+.texto2 h1{
   text-align: right;
 }
 
@@ -263,7 +316,7 @@ html {
 }
 
 .conteudo h1 {
-  color: #9c59a2;
+  color: #750380;
   font-size: 2em;
   margin-bottom: 10px;
 }
@@ -318,8 +371,13 @@ html {
   border-radius: 10px;
   font-size: 2.2em;
   font-weight: bold;
-  min-width: 120px; /* Garante tamanho mínimo para uniformidade */
+  width: 120px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+
 }
 .countdown span {
   display: block;
@@ -350,11 +408,6 @@ html {
   }
 }
 
-h1 {
-  font-size: 50px;
-  color: #750380;
-}
-
 .chama-gabinete {
   text-align: center;
   background-color: #f6ecd4;
@@ -365,8 +418,8 @@ h1 {
 .membro {
   background: #fff;
   border-radius: 12px;
-  width: 200px;
-  height: 200px;
+  width: 250px;
+  height: 250px;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -516,11 +569,11 @@ h1 {
   align-items: center;
   justify-content: center;
   gap: 2rem;
-  padding: 20px;
+  padding: 40px;
 }
 
 .img-gabinete {
-  height: 700px;
+  height: 500px;
   display: block;
   margin-left: 5%;
   margin-right: auto;
@@ -537,7 +590,7 @@ h1 {
   font-size: 2.5em;
   color: #9c59a2;
   margin-top: 40px;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
 }
 
 /*clubes.html*/
@@ -641,12 +694,60 @@ h1 {
 .titulo-regiao {
   width: 100%;
   font-family: "Times New Roman", Times, serif;
-  font-size: 50px;
+  font-size: 40px;
   font-style: italic;
   font-weight: 700;
   text-align: center;
   color: #712b75;
+  margin-bottom: 10px;
 }
+
+.page-subtitle{
+  font-family: 'Times New Roman', Times, serif;
+  font-size: 30px;
+  font-style: italic;
+  font-weight: 400;
+  text-align: center;
+  color: #712b75;
+  margin-top: 0px;
+}
+/*noticias*/
+
+/*agenda d2*/
+.container-calendario{
+  justify-content: center;
+}
+
+.event-list {
+  list-style: none;
+  padding: 0;
+  max-width: 400px;
+  margin: 20px auto;
+  font-family: Arial, sans-serif;
+}
+
+.event-item {
+  background-color: #f5f5f5;
+  margin-bottom: 10px;
+  padding: 12px 15px;
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  color: #9b4d9b;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  cursor: default;
+}
+
+.event-item:hover {
+  background-color: #e0e7ff;
+  color: #750380;
+}
+
+h1 {
+  text-align: center;
+  margin-top: 30px;
+}
+
 /*footer*/
 .footer {
   background-color: #9c59a2;
